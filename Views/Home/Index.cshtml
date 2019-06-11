@@ -1,0 +1,41 @@
+﻿@model HomeViewModel
+@{ 
+    int availableBooks = Model.BooksCount - Model.LendedBooksCount;
+}
+
+<h1>Library management dashboard</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Customers Count
+            </div>
+            <div class="panel-body">
+                There are @Model.CustomersCount customers
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Authors Count
+            </div>
+            <div class="panel-body">
+                There are @Model.AuthorsCount authors
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Books count
+            </div>
+            <div class="panel-body">
+                There are @availableBooks books available out of @Model.BooksCount books
+            </div>
+        </div>
+    </div>
+</div>
+    
+
